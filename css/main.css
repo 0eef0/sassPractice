@@ -1,0 +1,180 @@
+/* @mixin responsive-ratio($x,$y,$pseudo: false){
+    $padding: unquote(($y / $x) * 100 + '%');
+    @if $pseudo {
+        &:before{
+            @include pseudo($pos: relative);
+            width: 100%;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+} */
+body {
+  background-color: #5b65ad;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  position: relative;
+  min-height: 100vh;
+}
+body div#content {
+  padding-bottom: 10rem;
+}
+body div#navbar {
+  /* Properties for the navbar itself */
+  width: 90%;
+  height: 3rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: #3eab6b;
+  color: #fadf02;
+  font-family: helvetica;
+  text-align: center;
+  padding: 0.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  /* Properties for each of the buttons */
+}
+body div#navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  /* Properties for buttons with links */
+  /* Properties of a button being hovered over */
+  /* Used for either logos or site names */
+  /* used for dropdown menus */
+}
+body div#navbar ul li.navbtn {
+  font-size: calc(0.75rem + 0.75vw);
+  padding: 0;
+  margin: 0;
+  margin-top: 0.75rem;
+}
+body div#navbar ul li.navbtn:hover {
+  font-size: calc(1rem + 0.75vw);
+  transition: font-size 0.1s;
+}
+body div#navbar ul li.navbtn:hover ol.dropdown {
+  visibility: visible;
+  margin-top: 0;
+  transition: margin-top 0.5s;
+}
+body div#navbar ul li#main {
+  font-size: calc(2rem + 0.75vw);
+}
+body div#navbar ul li#main img {
+  height: 3rem;
+  margin: 0;
+  padding: 0;
+}
+body div#navbar ul ol.dropdown {
+  visibility: hidden;
+  list-style: none;
+  background-color: #3eab6b;
+  border-radius: 0 0 0.5rem 0.5rem;
+  width: 5rem;
+  margin-top: -10rem;
+  z-index: -10;
+}
+body div#navbar ul ol.dropdown li {
+  font-size: calc(0.1rem + 0.75vw);
+  text-align: center;
+  margin: 0.5rem 0 1rem -2rem;
+}
+body div#navbar ul ol.dropdown li:hover {
+  filter: brightness(0.8);
+}
+body div#footer {
+  background: #3eab6b;
+  color: #fadf02;
+  width: calc(100% - 4rem);
+  padding: 2rem;
+  height: 6rem;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  font-family: helvetica;
+}
+body div#footer h3 {
+  padding: 0;
+  margin: 0;
+}
+body div#footer div#backToTop {
+  position: absolute;
+  text-align: center;
+  background-color: #3eab6b;
+  padding: 0.5rem;
+  border-radius: 0.5rem 0 0 0;
+  filter: brightness(0.8);
+  width: 8%;
+  height: 1rem;
+  bottom: 0;
+  right: 0;
+}
+body div#footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+body div#footer ul .mediaLinks ol {
+  display: flex;
+  justify-content: space-evenly;
+}
+body div#footer ul .mediaLinks ol .mediaIcon {
+  width: 3rem;
+  height: 3rem;
+  border: #fadf02 2px solid;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  overflow: hidden;
+}
+body div#footer ul .mediaLinks ol .mediaIcon img {
+  width: 100%;
+  height: 100%;
+}
+body div#footer ul .mediaLinks,
+body div#footer ul .pageList {
+  text-align: center;
+}
+body div#footer ul .contactInfo {
+  text-align: right;
+}
+body div#footer ul li img {
+  height: 6rem;
+  margin: 0;
+  padding: 0;
+}
+body div#footer ul li ol {
+  list-style: none;
+}
+body div#footer ul li ol li {
+  font-size: calc(0.25rem + 00.75vw);
+}
+body h1 {
+  text-align: center;
+  color: red;
+  text-decoration: line-through;
+  width: 50%;
+  background-color: blue;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+body p {
+  color: maroon;
+  text-align: center;
+  text-decoration: underline;
+}
+body img {
+  /* @include _mixin.responsive-ratio(10,1); */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=main.css.map */

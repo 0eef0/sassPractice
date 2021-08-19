@@ -1,0 +1,40 @@
+@use './mixin' as _mixin;
+
+body {
+  background-color: #5b65ad;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  position: relative;
+  min-height: 100vh;
+
+  div#content {
+    padding-bottom: 10rem;
+  }
+
+  div#navbar {
+    @include _mixin.navbar(5, #3eab6b, #fadf02, 90%, 3rem, 0.75rem);
+  }
+
+  div#footer {
+    @include _mixin.footer(#3eab6b, #fadf02);
+  }
+
+  h1 {
+    text-align: center;
+    color: red;
+    text-decoration: line-through;
+    width: 50%;
+    background-color: blue;
+    @include _mixin.push--autoCenter;
+  }
+  p {
+    color: maroon;
+    text-align: center;
+    text-decoration: underline;
+  }
+  img {
+    /* @include _mixin.responsive-ratio(10,1); */
+    @include _mixin.push--autoCenter;
+  }
+}
